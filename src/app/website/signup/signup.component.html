@@ -1,0 +1,101 @@
+<div class="wrapper">
+    <div class="page-header">
+        <div class=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 Female" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    data-aos="fade-right">
+                    <div class="elementor-image">
+                        <img width="100%" height="648"
+                            src="https://wpbingosite.com/wordpress/monisa/wp-content/uploads/2019/10/img-rvsp1.png"
+                            class="attachment-full size-full" />
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="col-lg-6 col-sm-6 Form" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
+                    <div class="card card-register">
+                        <h3 class="title"> Create New Account </h3>
+                        <form data-aos="fade-down" class="register-form" [formGroup]="SignUpForm"
+                            (ngSubmit)="onSubmit()">
+                            <div class="modal-body">
+                                <div class="cardTabs">
+                                    <div class="tabsContent">
+                                        <div class="formCard mb-3">
+                                            <div class="row ">
+                                                <div class="form-group col-md-12">
+                                                    <!-- <label>First Name </label> -->
+                                                    <input placeholder="First Name" type="text" class="form-control"
+                                                        formControlName="FirstName">
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <!-- <label>Last Name </label> -->
+                                                    <input placeholder="Last Name" type="text" class="form-control"
+                                                        formControlName="LastName">
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <!-- <label> Gender </label> -->
+                                                    <select class="form-control" formControlName="gender">
+                                                        <option value="" selected>Gender</option>
+                                                        <option value="Male" selected>Male</option>
+                                                        <option value="Female">Female</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <!-- <label>BirthDate </label> -->
+                                                    <input placeholder="BirthDate" type="date" class="form-control"
+                                                        formControlName="birth_date">
+                                                </div>
+                                                <div class="form-group  col-md-12">
+                                                    <!-- <label>Contct Number </label> -->
+                                                    <input placeholder="Address" type="text" class="form-control"
+                                                        formControlName="address">
+                                                </div>
+                                                <div class="form-group  col-md-12">
+                                                    <!-- <label>Contct Number </label> -->
+                                                    <input placeholder="Contct Number" type="number"
+                                                        class="form-control" formControlName="phone_number">
+                                                </div>
+                                                <br>
+                                                <div class="form-group col-md-12">
+                                                    <!-- <label>Email </label> -->
+                                                    <input required placeholder="Email" type="email"
+                                                        class="form-control" formControlName="email">
+                                                </div>
+                                                <div class="input-group form-group col-md-12 form-group-no-border">
+
+                                                    <input required formControlName="password" #password
+                                                        [type]="ShowPassord ==false ? 'password' : 'text'"
+                                                        class="form-control" placeholder="Password">
+                                                    <div class="input-group-prepend">
+                                                        <span (click)="showPassword()" type="button"
+                                                            class="input-group-text"
+                                                            [hidden]="!SignUpForm.controls.password?.value">
+                                                            <i
+                                                                [ngClass]=" ShowPassord ==false ? 'nc-icon nc-bulb-63' : 'nc-icon nc-lock-circle-open'"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger btn-block btn-round"
+                                    [disabled]="SignUpForm.invalid">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Male Img -->
+                <div class="elementor-widget-container Male" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    data-aos="fade-left">
+                    <div class="elementor-image"> <img width="100%" height="648"
+                            src="https://wpbingosite.com/wordpress/monisa/wp-content/uploads/2019/10/img-rvsp2.png"
+                            class="attachment-full size-full" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

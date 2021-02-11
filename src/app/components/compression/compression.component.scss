@@ -1,0 +1,44 @@
+@import '../../../assets/sass/price-compare.scss';
+.steps {
+  margin: 10%;
+  background-color: white;
+  min-height: 360px;
+  padding: 40px;
+  border: 1px solid #ededed;
+  box-shadow: 10px 10px 10px #b4b2b2;
+}
+.steps .FirstStep .btn {
+  float: right;
+  border: none;
+  position: relative;
+  top: 122px;
+  background: none;
+  color: black;
+}
+.steps .SecoundStep .Parent {
+  margin-top: 20px;
+  border: 0.5px solid #dadada;
+  text-align: left;
+  padding: 20px;
+}
+
+.steps .SecoundStep .btn {
+  float: right;
+  border: none;
+  position: relative;
+  top: 26px;
+  background: none;
+  color: black;
+}
+.steps .LastStep .btn {
+  float: right;
+  border: none;
+  position: relative;
+  top: 122px;
+  background: none;
+  color: black;
+}
+.p-steps .p-steps-item.p-highlight .p-steps-number {
+  background: #F56045;
+  color: white;
+}

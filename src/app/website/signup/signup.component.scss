@@ -1,0 +1,35 @@
+form {
+  z-index: 10;
+}
+form input,
+form select {
+  border: 1px solid #c4c4c4fa !important;
+}
+.page-header {
+  background-color: #ffffff;
+}
+.container {
+  margin-top: 100px;
+}
+.card-register {
+  box-shadow: 0 0 70px 0 rgb(108 138 150 / 14%);
+  background-color: #ffffff;
+  max-width: 100%;
+  margin-top: 0;
+  min-height: 648px;
+}
+.Female {
+  text-align: right;
+  position: relative;
+  left: 30px;
+}
+.Male {
+  text-align: left;
+  position: relative;
+  right: 15px;
+}
+@media (max-width: 1190px) {
+  .elementor-image {
+    display: none !important;
+  }
+}

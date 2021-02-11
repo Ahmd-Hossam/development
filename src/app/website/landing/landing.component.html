@@ -1,0 +1,206 @@
+<header>
+    <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let slide of products">
+          <ng-template carouselSlide [id]="slide.id">
+               <div class="slide">
+                <img [src]="slide.img" [alt]="slide.alt" [title]="slide.title">
+                <div class="info" [class]="slide.ani">
+                    <h1> {{slide.big_title}} </h1>
+                    <p class="lead"> {{slide.pargraph}} </p>
+                    <div class="cont_button text-center"> <button> read more</button> </div>
+                  </div>
+                  <div class="overlay"></div>
+               </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+  </header>
+<!--==================================== end header  =============================-->
+
+
+<!--==================================== start about us =============================-->
+   <section class="about_us">
+       <div class="container">
+           <div class="title text-center">
+               <div class="cont_img">
+                    <img src="../../../assets/img/about/flowers.gif" alt="">
+               </div>
+               <div class="info">
+                    <h2> about us </h2>
+                    <p class='lead'>
+                        You have a custom printing creative project?
+                        The vector graphic Mountain fox illustration can be
+                        used for printing purpose on any support, without size limitation
+                        You have a custom printing creative project?
+                        The vector graphic Mountain fox illustration can be
+                        used for printing purpose on any support, without size limitation
+                    </p>
+               </div>
+           </div>
+       </div>
+   </section>
+<!--==================================== end about us  =============================-->
+
+
+
+
+    
+<!--------------------------------------------------- start best sals  ------------------>
+    <section class='the_best'>
+        <div class="container">
+            <div class="title text-center">
+                <div class="cont_img">
+                    <img src="../../../assets/img/about/flowers2.gif" alt="">
+                </div>
+                <h2> best selling products  </h2>
+            </div>
+            <div class="items">
+                <owl-carousel-o [options]="customOptions2" >
+                    <ng-template carouselSlide *ngFor='let cart of cards; index as i'>
+                    <div class="slide">
+                        <div class="item">
+                            <div class="cont_img">
+                                <img src="{{cart.img}}" alt="">
+                                <div class="overlay">
+                                    <ul class='list-unstyled'>
+                                        <li><mat-icon class='icon'> shopping_cart </mat-icon> </li>
+                                        <li><mat-icon class='icon'> favorite </mat-icon>      </li>
+                                        <li><mat-icon class='icon'> visibility </mat-icon>   </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class='div_1'>
+                                    <div class="stars">  
+                                        <a href="#"> <mat-icon  class='icon'> star </mat-icon> </a>
+                                        <a href="#"> <mat-icon  class='icon'> star </mat-icon> </a>
+                                        <a href="#"> <mat-icon  class='icon'> star </mat-icon> </a>
+                                        <a href="#"> <mat-icon  class='icon'> star </mat-icon> </a>
+                                        <a href="#"> <mat-icon  class='icon'> star </mat-icon> </a>
+                                    </div>
+                                    <div class="salary">   {{cart.new_salary | currency}}</div>
+                                </div>
+                                <div class='div_2'>
+                                    <div class="name"> {{cart.name}}</div>
+                                    <div class="salary"> <i class="fas fa-dollar-sign"></i> {{cart.old_salary | currency}}</div>
+                                </div>
+                                <button> <mat-icon class='icon'> shopping_cart </mat-icon> add to cart </button>
+                            </div>
+                        </div>
+                    </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </section>
+    <!----------------------------------------------------- end best sals  ------------------->
+
+
+
+
+
+ <!--------------------------------------- start appoinment     ------------------------>
+    <section class='appoinment'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="info">
+                        <div class="main_title text-center">
+                            <div class="cont_img">
+                                <img src="../../../assets/img/about/flowers.gif" alt="">
+                            </div>
+                            <h2> Appointment </h2>
+                        </div>
+                        <div class="description">
+                            <h2> want to make a booking or have a qusetion? </h2>
+                            <p class='lead'> Call me: <span>002-6666-8888</span> or fill out our online booking  equiry form and well contact you </p>
+                        </div>
+                        <div class="cont_button"> <button> make an appoinment </button> </div>
+                    </div>
+                </div>
+                <div class="col-lg girl">
+                    <div class="main_cont">
+                        <div class="cont_img"> 
+                            <img src="../../../assets/img/appointment/1.png" alt="">
+                            <div class="inside_border"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--------------------------------------- end appoinment    ------------------------>
+   
+
+
+<!--------------------------------------------------- start classic modern  ----------->
+    <section class='classic'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="info">
+                        <div class="title">
+                            <h2> Classy & Modern </h2>
+                            <p> Etiam rhoncus. Maecenas tempus, tellus eget dolor condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                            <button> submite </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="cont_img">
+                        <img src="../../../assets/img/classic/h11-img-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--------------------------------------------------- end classic modern  ----------->
+
+
+
+
+
+
+<!--------------------------------------------------- start best sals  ------------------>
+
+<!----------------------------------------------------- start customer  ------------------->
+    <section class="customer">
+        <div class="container">
+           <div class="title">
+            <span > <i class="fas fa-fire-alt"></i> ONLY REAL REVIEWS </span>
+            <h2> client feedback </h2>
+           </div>
+            <owl-carousel-o [options]="customOptions3">
+                <ng-container *ngFor="let slide of customers">
+                    <ng-template carouselSlide [id]="slide.id">
+                        <div class="slide">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col col-md-2">
+                                        <div class="cont_img"> <img [src]="slide.img" alt=""></div>
+                                    </div>
+                                    <div class="col col-md-8">
+                                        <div class="info">
+                                            <h2> {{slide.name}} </h2>
+                                            <span> mansoura,egypt </span>
+                                            <p class='lead'> 
+                                               {{slide.comment}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-2">
+                                        <div class="quots"> <i class="fas fa-quote-right"></i> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+        <div class="overlay"></div>
+    </section>
+  <!----------------------------------------------------- end customer  ------------------->
+

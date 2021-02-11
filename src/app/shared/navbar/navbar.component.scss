@@ -1,0 +1,48 @@
+.navbar{
+  height: 60px;
+
+}
+
+.nvcx {
+  width: max-content;
+  box-shadow: 0 0px 6px rgb(0 0 0 / 25%);
+  border-radius: 37px;
+}
+.active{
+  color: #ca9c85 !important;
+  font-weight: 600 !important;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  //   color: #CA9C85;
+  color: #8f8985;
+  display: inline-block;
+  // line-height: 18px;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+.ProfileOption {
+  position: absolute;
+  top: 73px;
+  right: 0;
+  border: 1px solid #dfdfdf;
+  background: white;
+  box-shadow: 10px 10px 10px #f3f3f32e;
+  min-width: 220px;
+  text-align: center;
+  transition: 0.5s all;
+}
+@media (min-width: 1000px) {
+  .navbar-collapse {
+    position: absolute;
+    right: 80px;
+  }
+}
+
+
+
+.black_background{
+  background:#222;
+  color:#f1f1f1
+}

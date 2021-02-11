@@ -1,0 +1,87 @@
+<!-- navbar navbar-expand-lg fixed-top -->
+<!-- navbar navbar-expand-lg fixed-top navbar-transparent -->
+<nav class="navbar navbar-expand-lg fixed-top" color-on-scroll="500">
+    <div class="navbar-translate ml-4 mr-4">
+        <a class="navbar-brand" routerLink="/home">Musaada</a>
+        <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"
+            (click)="sidebarToggle()">
+            <span class="navbar-toggler-bar"></span>
+            <span class="navbar-toggler-bar"></span>
+            <span class="navbar-toggler-bar"></span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav " style="margin-left: 24px;">
+                <!-- <li (click)="ProfileOption = false" class="nav-item" style="margin-right: 50px;">
+                    <a routerLink="/" class="nav-link" [routerLink]="['/']" [routerLinkActive]="['active']"
+                        [routerLinkActiveOptions]="{ exact: true }" router>
+                        <i class="nc-icon nc-book-bookmark"></i> Home
+                    </a>
+                </li> -->
+                <li (click)="ProfileOption = false" class="nav-item" *ngIf="sharedService.TokenObject">
+                    <a routerLink="/home-auth" class="nav-link" [routerLinkActive]="['active']">
+                         Home
+                    </a>
+                </li>
+                <li (click)="ProfileOption = false" class="nav-item" >
+                    <a routerLink="/compression" class="nav-link" [routerLinkActive]="['active']">
+                         Our Services
+                    </a>
+                </li>
+                <li class="nav-item" >
+                    <a (click)="ProfileOption = false" [routerLinkActive]="['active']" href="#" class="nav-link">
+                         About Us
+                    </a>
+                </li>
+                <li class="nav-item" >
+                    <a (click)="ProfileOption = false" [routerLinkActive]="['active']" routerLink="contactus"
+                        class="nav-link">
+                         Contact Us
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="!sharedService.TokenObject">
+                    <a href="javascript:void(0)" routerLink="/signin" [routerLinkActive]="['active']" class="nav-link">
+                         Login
+                    </a>
+                </li>
+                
+                <li class="nav-item" (click)="ToggelProfileOption()" *ngIf="sharedService.TokenObject">
+                    <a style="color: #fff;" class="nav-link btn-danger btn-round">
+                        
+                    </a>
+                </li>
+                <div class="ProfileOption" data-aos="fade-right" *ngIf="ProfileOption">
+                    <br>
+                    <h5 > Welcom, {{UserDetail.name}}</h5>
+                    <hr>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" (click)="ProfileOption = false" routerLink="profile"
+                            class="nav-link ">
+                            My Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" (click)="ProfileOption = false" routerLink="wish-list"
+                            class="nav-link ">
+                            Wish List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" (click)="ProfileOption = false" routerLink="profile"
+                            (click)="Logout()" routerLink="/signin" class="nav-link ">
+                            Logout
+                        </a>
+                    </li>
+                </div>
+            </ul>
+
+
+        </div>
+        <!-- <div class="navbar-translate mr-4">
+            <a class="navbar-brand" routerLink="/home">Musaada</a>
+        </div> -->
+    </div>
+
+</nav>

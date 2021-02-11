@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAP,kFAAO",
+    "sources": [
+        "auth-landing.component.scss"
+    ],
+    "names": [],
+    "file": "auth-landing.component.css"
+}

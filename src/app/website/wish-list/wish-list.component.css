@@ -1,0 +1,106 @@
+.wish {
+  overflow: hidden;
+}
+.wish h1 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 500;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: block;
+  position: relative;
+  font-family: "Hind", sans-serif;
+  color: #191919;
+  margin-bottom: 0px;
+  font-weight: 500;
+}
+.companys h3 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  padding: 0 20px 13px 0;
+  cursor: pointer;
+  color: #191919;
+  border-bottom: 1px solid#e9e7e7;
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+.wish .row .search {
+  position: relative;
+  float: right;
+  top: -30px;
+  left: -10px;
+  font-size: 20px;
+}
+.wish .row .search .wishList h1 {
+  margin-left: 10px;
+}
+.wish .row .wishList .row .Detail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.wish .row .wishList .row .Detail li {
+  font-size: 12px;
+  line-height: 19px;
+}
+.wish .row .wishList .row .Detail a {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+.wish .row .wishList .row .Detail .description {
+  margin-top: 10px;
+  font-family: "Hind", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #777777;
+}
+ngb-rating{
+  color: #ffb51a;
+  position: relative;
+  top: 0px;
+  font-size: 25px;
+}
+.wish .row .wishList .row .Action .price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #191919;
+}
+.wish .row .wishList .row .Action del {
+  font-size: 15px;
+  color: red;
+}
+.wish .row .wishList .row .Action .contact {
+  width: 95px;
+  padding: 5px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+}
+.wish .row .wishList .row .Action .UnWish {
+  width: 95px;
+  padding: 5px;
+  margin-right: 0px;
+}
+.wish .row .wishList .product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+  border: 1px solid #fff;
+}
+
+nav ul {
+  width: 161px;
+  /* overflow: hidden; */
+  height: 36px;
+}

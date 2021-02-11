@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <div class="page-header">
+        <div class=""></div>
+        <div class="container">
+            <div class="row">
+                <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-3 col-sm-3 elementor-image">
+                    <div>
+                        <img width="388" height="671"
+                            src="https://wpbingosite.com/wordpress/monisa/wp-content/uploads/2019/10/banner1-17.png"
+                            alt="">
+                    </div>
+                </div>
+                <div data-aos="fade-down" data-aos-duration="1000" class="col-lg-6 col-sm-6"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <div class="card card-register">
+                        <!--  -->
+                        <div class="content-title">
+                            <div class="title">
+                                <h2>Make an enquiry</h2>
+                                <div class="subtitle">Let’s Meet</div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <form class="register-form" [formGroup]="ContactForm" (ngSubmit)="onSubmit()">
+                            <div class="input-group ">
+                                <input required formControlName="name" type="text" class="form-control"
+                                    placeholder="Name">
+                            </div>
+                            <div class="input-group ">
+                                <input formControlName="email" type="text" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="input-group ">
+                                <input required formControlName="phone_number" type="number" class="form-control"
+                                    placeholder="Phone Number">
+                            </div>
+
+                            <div class="input-group ">
+                                <textarea required class="form-control" placeholder="Write Your Message"
+                                    formControlName="message" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <button class="btn btn-danger btn-block btn-round"
+                                [disabled]="ContactForm.invalid">Send</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-3"></div>
+            </div>
+        </div>
+    </div>
+</div>

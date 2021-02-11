@@ -1,0 +1,28 @@
+<div class="steps" data-aos="fade-left" data-aos-duration="2000">
+    <p-steps [model]="items" [(activeIndex)]="activeIndex" [readonly]="true"></p-steps>
+    <div class="FirstStep form-group " *ngIf="activeIndex == 0">
+        <div class="col-12">
+            <label for="exampleInputEmail1">Select Your Location</label>
+            <select class="form-control" [(ngModel)]="selectedValue">
+                <option *ngFor="let item of options" [value]="item.id">{{item.name}}</option>
+            </select>
+        </div>
+        <a class="btn  btn-link btn-danger" (click)=" CheckAction(1)">Submit</a>
+    </div>
+    <form class="container">
+        <div class="SecoundStep form-group" *ngIf="activeIndex == 1">
+            <div class="Parent">
+                <p>Select The Services</p>
+                <input type="checkbox" name="sport1" value="cricket">Organizational structure<br>
+                <input type="checkbox" name="sport2" value="tennis">Security system<br>
+                <input type="checkbox" name="sport3" value="football">Documentation management<br>
+            </div>
+            <a class="btn  btn-link btn-danger" (click)="CheckAction(2)">Submit</a>
+        </div>
+        <div class="LastStep form-group" *ngIf="activeIndex == 2">
+            <label for="exampleInputEmail1">Select Date</label>
+            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <a class="btn  btn-link btn-danger" (click)="CheckAction(0)">back</a>
+        </div>
+    </form>
+</div>
