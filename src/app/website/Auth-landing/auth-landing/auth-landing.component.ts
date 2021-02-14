@@ -11,6 +11,8 @@ import * as AOS from 'aos'
   styleUrls: ['./auth-landing.component.scss']
 })
 export class AuthLandingComponent implements OnInit {
+  wish_list:any[]=[]
+
 
   constructor(private ChatService: ChatService,
     private _toastr: ToastrService,
@@ -84,9 +86,16 @@ export class AuthLandingComponent implements OnInit {
   }
   ServicesResult
   UnWish(item) {
+    /*
+    console.log(item.name);
+    this.wish_list.push({name:item.name});
+    console.log(this.wish_list);
+    */
+
     item.is_wished = !item.is_wished
     this.WishService.UnWish(item.id, this.shareService.TokenObject).subscribe(res => {
       this.getWishList()
+      
     })
   }
   UpdateDate(Link) {

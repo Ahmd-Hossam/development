@@ -64,6 +64,7 @@ export class SigninComponent implements OnInit {
       .pipe(first())
       .subscribe(
         (data: any) => {
+          
           console.log(data);
           this._toastr.success('Login successful!', 'Success');
           this.sharedServices.TokenObject = data.access;
@@ -88,7 +89,6 @@ export class SigninComponent implements OnInit {
             }
             this.loading = false;
 
-            
           }
         });
     // get User Details

@@ -55,8 +55,7 @@ export class AuthService {
    * @param password 
    */
   login(email, password) {
-    //return this.http.post<User>('/api/v1/token/', { email, password })
-    return this.http.post<User>(`${environment.apiUrl}users/login`, { email, password })
+    return this.http.post<User>('http://3.137.146.195/api/v1/token/', { email, password })
       // .pipe(map(user => {
       //   localStorage.setItem('user', JSON.stringify(user));
       //   this.userSubject.next(user);
@@ -72,7 +71,7 @@ export class AuthService {
     localStorage.removeItem('tokenObject');
 
     this.userSubject.next(null);
-    this.router.navigate(['/auth/login']);
+    this.router.navigate(['http://3.137.146.195/auth/login']);
   }
 
   /**
@@ -83,17 +82,17 @@ export class AuthService {
     console.log('Print Env test');
     console.log(environment.apiUrl);
 
-    return this.http.post(`/api/v1/auth/`, user);
+    return this.http.post(`http://3.137.146.195/api/v1/auth/`, user);
   }
 
   /**
    * GET: Method that get all users
    */
   getAll(Token) {
-    return this.http.get<User[]>(`/api/v1/auth/`, {
+    return this.http.get<User[]>(`http://3.137.146.195/api/v1/auth/`, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': "Bearer " + Token,
+        'Authorization': `Bearer ${Token}`
         // 'Access-Control-Allow-Headers': "*"
       })
     });
@@ -265,4 +264,7 @@ export class AuthService {
   private stopRefreshTokenTimer() {
     clearTimeout(this.refreshTokenTimeout);
   }
+
+
+
 }

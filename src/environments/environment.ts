@@ -5,8 +5,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://dummy.restapiexample.com/api/v1/employee/1',
-  // apiUrl: 'http://3.137.146.195/api/v1/',
+  apiUrl: 'http://3.137.146.195/api/v1/',
   // secure: false,
   // logLevel: "debug"
 };

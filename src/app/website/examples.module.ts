@@ -22,6 +22,7 @@ import { AuthLandingComponent } from './Auth-landing/auth-landing/auth-landing.c
 //my imports
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {MatIconModule} from '@angular/material/icon';
+import { WishItemComponent } from './wish-item/wish-item.component';
 @NgModule({
     imports: [
         CommonModule,
@@ -49,6 +50,7 @@ import {MatIconModule} from '@angular/material/icon';
         WishListComponent,
         ChatComponent,
         AuthLandingComponent,
+        WishItemComponent,
     ],
 })
 export class ExamplesModule { }

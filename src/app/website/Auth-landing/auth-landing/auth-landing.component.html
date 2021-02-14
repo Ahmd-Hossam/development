@@ -4,16 +4,7 @@
     <br><br>
     <div class="row">
         <div class="col-md-3 pr-5 pl-5 companys">
-            <h3>Companys</h3>
-            <br>
-            <!-- <input type="search" placeholder="Search" class="form-control" name="" id=""> -->
-            <!-- <i class="search nc-icon nc-zoom-split" type="button"></i> -->
-            <br>
-            <ul class="list-group" *ngFor="let item of Companys">
-                <li type="button"
-                    [ngStyle]="{'color': item.Select ? 'white' : 'black', 'background': item.Select ? '#F56045' : 'white'}"
-                    (click)="FiltterByCompany(item)" class="list-group-item">{{item.name}}</li>
-            </ul>
+            <app-wish-list></app-wish-list>
         </div>
         <div class="wishList col-md-8">
             <hr>

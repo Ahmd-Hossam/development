@@ -45,38 +45,57 @@
 -->
 
 <!-- ******wish List****** -->
-<div class="wish mt-5 mb-5 text-center">
+<div class="wish mt-5 mb-5 text-center" style="margin-top: 0 !important;">
     <br><br>
     <div class="row">
-        <div class="col-md-3 pr-5 pl-5 companys">
-            <!-- <h3>Companys</h3>
-            <br>
-            <input type="search" placeholder="Search" class="form-control" name="" id="">
-            <i class="search nc-icon nc-zoom-split" type="button"></i>
-            <br>
-            <ul class="list-group" *ngFor="let item of Companys">
-                <li type="button"
-                    [ngStyle]="{'color': item.Select ? 'white' : 'black', 'background': item.Select ? '#F56045' : 'white'}"
-                    (click)="FiltterByCompany(item)" class="list-group-item">{{item.name}}</li>
-            </ul> -->
-        </div>
-        <div class="wishList col-md-8" *ngIf="WishList">
+        <!--
+            <div class="col-md-3 pr-5 pl-5 companys">
+                <h3>Companys</h3>
+                <br>
+                <input type="search" placeholder="Search" class="form-control" name="" id="">
+                <i class="search nc-icon nc-zoom-split" type="button"></i>
+                <br>
+                <ul class="list-group" *ngFor="let item of Companys">
+                    <li type="button"
+                        [ngStyle]="{'color': item.Select ? 'white' : 'black', 'background': item.Select ? '#F56045' : 'white'}"
+                        (click)="FiltterByCompany(item)" class="list-group-item">{{item.name}}</li>
+                </ul> 
+            </div>
+        -->
+        <div class="wishList" *ngIf="WishList">
+            <h1> Wish List </h1>
             <hr>
             <p-table [value]="WishList" [rows]="7">
                 <ng-template pTemplate="body" let-product>
                     <tr>
                         <td>
                             <div class="row">
+                                <!--
                                 <div class="col-3">
                                     <img class="product-img" src="{{product.service_photo}}" alt="">
                                 </div>
-                                <div class="Detail col-6">
+                                -->
+                                <div class="Detail col-12">
                                     <div class="tt-row">
                                         <ul>
                                             <li>
                                                 <a class="text-uppercase">{{product.service_name}}</a>
+                                                <br>
+                                                <a routerLink='wish-item' (click)='show(product.service_name,product.service_price,product.service_price_after_discount,product.service_description)'
+                                                 style="
+                                                 font-weight: normal;
+                                                 font-weight: normal;
+                                                color: #17a2b8 !important;
+                                                font-size: 15px;
+                                                text-transform: capitalize;
+                                                color:#00f;
+                                                /* padding-top: 8px; */
+                                                position: relative;
+                                                top:5px;"
+                                                > show details </a>
                                             </li>
                                         </ul>
+                                        <!--
                                         <div class="tt-rating">
                                             <ngb-rating class="raterater-hover-layer" [max]="5" [readonly]="true"
                                                 [(rate)]="product.service_no_stars"></ngb-rating>
@@ -84,9 +103,11 @@
                                         <div class="description">
                                             {{product.service_description}}
                                         </div>
+                                        -->
                                     </div>
                                 </div>
-                                <div class="Action col-3 text-right">
+                                <!--
+                                <div class="Action text-right">
                                     <div class="price">
                                         <span *ngIf="product.service_price_after_discount == 'None'">
                                             {{product.service_price}}
@@ -96,16 +117,22 @@
                                             <del>{{product.service_price}} </del>
                                         </span>
                                     </div>
-                                    <!-- (click)="ContctCompany(product)" -->
+                                    -->
+
+                                    <!-- (click)="ContctCompany(product)"  old commint--> 
+                                    <!--
                                     <button class="contact btn btn-info"
                                         (click)="DialogAction(product)">Contact</button><br>
-                                    <button class="UnWish btn btn-danger" (click)="UnWish(product)">UnWish</button>
+                                    <button class="UnWish btn btn-danger" (click)="UnWish(product)"> UnWish </button>
+                                   
                                 </div>
+                                 -->
                             </div>
                         </td>
                     </tr>
                 </ng-template>
             </p-table>
+        <!--
             <br>
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
@@ -126,7 +153,9 @@
                     </li>
                 </ul>
             </nav>
+             -->
         </div>
+       
     </div>
 
 </div>

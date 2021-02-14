@@ -11,11 +11,11 @@ export class ChatService {
 
   ) { }
   SendMessage(Message, id,Token ) {
-    return this.http.post(`/api/v1/service/${id}/contact_company/`, Message, 
+    return this.http.post(`http://3.137.146.195/api/v1/service/${id}/contact_company/`, Message, 
     {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': "Bearer " + Token,
+        'Authorization': `Bearer ${Token}`
         // 'Access-Control-Allow-Headers': "*"
       })
     }

@@ -16,6 +16,9 @@ export class StorageService {
         localStorage.removeItem(key);
     }
 
+
+
+    
     read<T>(key: string): T {
         let value = localStorage.getItem(key);
         if (value && value != "undefined" && value != "null") {

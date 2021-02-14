@@ -83,11 +83,18 @@ export class WishListComponent implements OnInit {
     console.log(item);
     this.Route.navigate(['/Contact-Company', item.id])
   }
+
   UnWish(item) {
     this.WishService.UnWish(item.service_id, this.shareServices.TokenObject).subscribe(res => {
       this.getWishList()
     })
   }
+
+
+  show(name,price,afer,description){
+    this.WishService.setitem(name,price,afer,description)
+  }
+
   UpdateDate(Link) {
     if (Link == 'Previous') {
       this.WishService.UpdateDate(this.ServicesResult.previous, this.shareServices.TokenObject).subscribe((res: any) => {

@@ -10,13 +10,13 @@ declare var $: any;
 
 @Injectable({
   providedIn: 'root'
+  
 })
 export class SharedService {
 
   private dataStore: object = {};
 
-  constructor(private http: HttpClient, private toastr: ToastrService
-  ) {
+  constructor(private http: HttpClient, private toastr: ToastrService) {
     let url;
     // = (urlSetting as any).default
     this.setDataIntoStore('urlSetting', url);
@@ -107,6 +107,9 @@ export class SharedService {
   public get Lang(): string {
     return this.getDataFromStore(LocalStorageKeys.LANG);
   }
+
+
+  
   public set TokenObject(token) {
     this.setDataIntoStore(LocalStorageKeys.TOKENOBJECT, token);
   }
